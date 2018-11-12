@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["item"],{f0df:function(e,t,n){"use strict";n.r(t);var i=function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",{staticClass:"item view"})},s=[],a=n("2b0e"),l=a["a"].extend({name:"Item",components:{}}),o=l,c=n("2877"),u=Object(c["a"])(o,i,s,!1,null,null,null);u.options.__file="Item.vue";t["default"]=u.exports}}]);
+//# sourceMappingURL=item.0b7f9e0f.js.map
