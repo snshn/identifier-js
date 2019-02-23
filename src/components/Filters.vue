@@ -1,7 +1,7 @@
 <template>
   <div class="filters component">
 
-    <ul v-for="(filter, i) in filters" :key="i" v-if="filter.type !== TYPES.BOOL">
+    <ul v-for="filter in nonBooleanFilters" :key="filter.name">
       <li>
         <template v-if="filter.type === TYPES.ENUM">
           <p class="sidebar-label">{{ filter.title }}</p>
@@ -10,7 +10,7 @@
       </li>
     </ul>
 
-    <ul v-for="(filter, i) in filters" :key="i" v-if="filter.type === TYPES.BOOL">
+    <ul v-for="filter in booleanFilters" :key="filter.name">
       <li>
         <BoolFilterComponent :label="filter.title" :filterName="filter.name" />
       </li>
@@ -25,7 +25,7 @@
 import Vue from 'vue';
 import store from '@/store';
 import { filters } from '@/data';
-import { TYPES } from '@/types';
+import { TYPES, IdentifierFilter } from '@/types';
 import BoolFilterComponent from '@/components/filters/Bool.vue';
 import EnumFilterComponent from '@/components/filters/Enum.vue';
 
@@ -41,13 +41,16 @@ export default Vue.extend({
       TYPES,
     };
   },
-  computed: {
-    filters() {
-      return store.state.filters;
-    },
-  },
   mounted() {
     store.commit('init');
+  },
+  computed: {
+    booleanFilters(): IdentifierFilter[] {
+      return filters.filter((f) => f.type === TYPES.BOOL);
+    },
+    nonBooleanFilters(): IdentifierFilter[] {
+      return filters.filter((f) => f.type !== TYPES.BOOL);
+    },
   },
 });
 

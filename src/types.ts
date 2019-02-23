@@ -17,6 +17,7 @@ interface Values {
 export const TYPES = {
   BOOL: 1,
   ENUM: 2,
+  INT: 3,
 };
 
 export interface RootState {

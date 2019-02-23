@@ -1,12 +1,9 @@
-// src/data/monitors/items.manufacturers.ts
+// src/data/motherboards/items.manufacturers.ts
 
 import { IdentifierEnum } from '@/types';
 
 const MANUFACTURERS: IdentifierEnum = {
-  DELL: 'Dell',
-  SAMSUNG: 'Samsung',
-  ACER: 'Acer',
-  BENQ: 'BenQ',
+  ASUS: 'Asus',
 };
 
 export default MANUFACTURERS;
