@@ -24,7 +24,7 @@
           <div class="columns">
             <div class="column">
               <p>
-                Contains a sample set of data which may be not completely accurate.
+                Contains a sample set of data which may be not 100% accurate.
               </p>
               <p>
                 <small>
@@ -53,12 +53,13 @@
 <script lang="ts">
 
 import Vue from 'vue';
+import { title } from './data';
 
 export default Vue.extend({
   name: 'Identifier',
   data() {
     return {
-      appName: 'Identifier',
+      appName: title,
       version: require('../package.json').version,
     };
   },

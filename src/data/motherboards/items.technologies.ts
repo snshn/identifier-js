@@ -1,4 +1,4 @@
-// src/data/monitors/items.technologies.ts
+// src/data/motherboards/items.technologies.ts
 
 import { IdentifierEnum } from '@/types';
 

@@ -6,7 +6,7 @@
     <template v-else>
       <ul v-if="mode === 'List'" class="mode-list">
         <li v-for="(item, index) in items" :key="index">
-          {{ item.manufacturer }} {{ item.model }} {{ item.size }}" {{ item.technology }} Monitor
+          {{ item.manufacturer }} {{ item.name }} <!-- TODO -->
         </li>
       </ul>
     </template>

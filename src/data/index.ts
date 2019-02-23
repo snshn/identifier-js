@@ -1,3 +1,3 @@
-import { items, filters, Item } from './_symlink';
+import { items, filters, title, templates, Item } from './_symlink';
 
-export { items, filters, Item };
+export { items, filters, title, templates, Item };

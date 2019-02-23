@@ -1,8 +1,7 @@
-// src/data/monitors/items.ts
+// src/data/motherboards/items.ts
 
 import MANUFACTURERS from './items.manufacturers';
 import TECHNOLOGIES from './items.technologies';
-import PORTS from './items.ports';
 
 export interface Item {
   manufacturer: string;
@@ -18,7 +17,6 @@ export interface Item {
   staticContrast: number;
   dynamicContrast: number;
   curved: boolean;
-  ports: object;
   camera: boolean;
   speakers: boolean;
   [key: string]: any;
@@ -39,11 +37,6 @@ const items: Item[] = [
     staticContrast: 0,
     dynamicContrast: 1000000,
     curved: false,
-    ports: {
-      [PORTS.MINIDP]: 1,
-      [PORTS.HDMI20]: 1,
-      [PORTS.USBC]: 1,
-    },
     camera: false,
     speakers: false,
   },
@@ -61,15 +54,6 @@ const items: Item[] = [
     staticContrast: 3000, // TODO
     dynamicContrast: 0, // TODO undefined
     curved: true,
-    ports: {
-      [PORTS.MINIDP]: 1,
-      [PORTS.DP14]: 1,
-      [PORTS.HDMI20]: 2, // TODO (you sure it's 2.0?)
-      [PORTS.A35MMIN]: 1,
-      [PORTS.A35MMOUT]: 1,
-      [PORTS.USB30IN]: 2,
-      [PORTS.USB30OUT]: 1,
-    },
     camera: false,
     speakers: false,
   },
@@ -87,14 +71,6 @@ const items: Item[] = [
     staticContrast: 0, // TODO
     dynamicContrast: 1000,
     curved: false,
-    ports: {
-      [PORTS.USB30IN]: 2,
-      [PORTS.USB30OUT]: 1,
-      [PORTS.USBC]: 1,
-      [PORTS.HDMI20]: 2,
-      [PORTS.DP14]: 1,
-      [PORTS.A35MMOUT]: 1,
-    },
     camera: false,
     speakers: false,
   },
