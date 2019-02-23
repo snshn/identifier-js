@@ -1,33 +1,34 @@
 {
   "name": "identifier",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "postbuild": "echo `git rev-parse --abbrev-ref HEAD`':'`git rev-parse HEAD | cut -c1-8` > dist/revision.txt",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "register-service-worker": "^1.0.0",
-    "vue": "^2.5.17",
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "register-service-worker": "^1.6.2",
+    "vue": "^2.6.7",
+    "vue-router": "^3.0.2",
+    "vuex": "^3.1.0"
   },
   "devDependencies": {
-    "@types/jest": "^23.1.4",
-    "@vue/cli-plugin-e2e-cypress": "^3.0.4",
-    "@vue/cli-plugin-pwa": "^3.0.4",
-    "@vue/cli-plugin-typescript": "^3.0.4",
-    "@vue/cli-plugin-unit-jest": "^3.0.4",
-    "@vue/cli-service": "^3.0.4",
-    "@vue/test-utils": "^1.0.0-beta.20",
-    "bulma": "^0.7.2",
-    "node-sass": "^4.9.0",
+    "@types/jest": "^23.3.14",
+    "@vue/cli-plugin-e2e-cypress": "^3.4.1",
+    "@vue/cli-plugin-pwa": "^3.4.1",
+    "@vue/cli-plugin-typescript": "^3.4.1",
+    "@vue/cli-plugin-unit-jest": "^3.4.1",
+    "@vue/cli-service": "^3.4.1",
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "bulma": "^0.7.4",
+    "node-sass": "^4.11.0",
     "sass-loader": "^7.0.1",
-    "ts-jest": "^23.0.0",
-    "typescript": "^3.0.0",
-    "vue-template-compiler": "^2.5.17"
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.3.3333",
+    "vue-template-compiler": "^2.6.7"
   }
 }
