@@ -4,12 +4,12 @@
     <nav class="navbar docs-navbar is-spaced has-shadow">
       <div class="container">
         <div class="navbar-brand">
-          <router-link class="navbar-item" exact-active-class="is-active" to="/">{{ appName }}</router-link>
+          <router-link class="navbar-item" exact-active-class="is-active" :to="getMainLink()">{{ appName }}</router-link>
           <span class="navbar-burger burger"><span></span> <span></span> <span></span></span>
         </div>
         <div class="navbar-menu">
           <div class="navbar-end">
-            <router-link class="navbar-item" exact-active-class="is-active" to="/">Main</router-link>
+            <router-link class="navbar-item" exact-active-class="is-active" :to="getMainLink()">Main</router-link>
             <router-link class="navbar-item" exact-active-class="is-active" to="/about">About</router-link>
           </div>
         </div>
@@ -24,7 +24,7 @@
           <div class="columns">
             <div class="column">
               <p>
-                Contains a sample set of data which may be not 100% accurate.
+                Contains a sample set of data which may be not absolutely accurate.
               </p>
               <p>
                 <small>
@@ -38,7 +38,7 @@
               </div>
             </div>
             <div class="column">
-              <router-link class="navbar-item has-text-weight-semibold" exact-active-class="is-active" to="/">Main</router-link>
+              <router-link class="navbar-item has-text-weight-semibold" exact-active-class="is-active" :to="getMainLink()">Main</router-link>
               <router-link class="navbar-item has-text-weight-semibold" exact-active-class="is-active" to="/about">About</router-link>
             </div>
           </div>
@@ -53,15 +53,39 @@
 <script lang="ts">
 
 import Vue from 'vue';
+import { mapState } from 'vuex';
 import { title } from './data';
 
 export default Vue.extend({
   name: 'Identifier',
-  data() {
+  data(): object {
     return {
       appName: title,
       version: require('../package.json').version,
     };
+  },
+  methods: {
+    getMainLink() {
+      return btoa(JSON.stringify(this.refinements));
+    },
+  },
+  computed: mapState(['refinements']),
+  watch: {
+    // Watch the 'refinements' state parameter
+    refinements: {
+      handler(newValue): void {
+        const newValueEncoded = btoa(JSON.stringify(newValue));
+
+        // Programmatically navigate to /{newValueEncoded}
+        this.$router.push({
+          name: 'main',
+          params: {
+            base64refinements: newValueEncoded,
+          },
+        });
+      },
+      deep: true,
+    },
   },
 });
 

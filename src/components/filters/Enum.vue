@@ -52,7 +52,7 @@ export default Vue.extend({
           this.$set(this.prevVals, optionKey, false);
       }
 
-      this.$store.commit('setEnumFilterVal', {
+      this.$store.commit('setRefinementEnum', {
         name: this.filterName,
         key: optionKey,
         value: this.prevVals[optionKey],
@@ -62,7 +62,7 @@ export default Vue.extend({
   mounted() {
     setTimeout(() => { // Let the templating engine render the v-for loop first
       const checkboxEls = this.$el.getElementsByTagName('input');
-      const currentVals: (undefined|{ [key: string]: any }) = this.$store.state.filters[this.filterName];
+      const currentVals: (undefined|{ [key: string]: any }) = this.$store.state.refinements[this.filterName];
 
       if (currentVals === undefined) {
         for (let i = 0; i < checkboxEls.length; i++) {

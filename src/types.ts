@@ -6,7 +6,7 @@ export interface IdentifierEnum {
   [key: string]: string;
 }
 
-interface Filters {
+interface Refinements {
   [key: string]: any;
 }
 
@@ -22,7 +22,7 @@ export const TYPES = {
 
 export interface RootState {
   items: Item[];
-  filters: Filters;
+  refinements: Refinements;
   values: Values;
   mode: string;
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="item view">{{item}}</div>
+  <div class="container item view">{{item}}</div>
 </template>
 
 
@@ -16,8 +16,6 @@ export default Vue.extend({
     return {
       item: JSON.parse(atob(this.base64data)),
     };
-  },
-  computed: {
   },
 });
 

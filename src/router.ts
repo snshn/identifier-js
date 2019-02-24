@@ -20,12 +20,12 @@ export default new Router({
     },
     {
       path: '/item/:base64data',
-      props: true,
       name: 'item',
       component: () => import(/* webpackChunkName: "item" */ './views/Item.vue'),
+      props: true,
     },
     {
-      path: '/:filter?',
+      path: '/:base64refinements?',
       name: 'main',
       component: Main,
     },
