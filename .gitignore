@@ -24,4 +24,4 @@ yarn-error.log*
 *.sw*
 
 # Don't ask
-src/data/_symlink
+src/data/_current

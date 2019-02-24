@@ -32,7 +32,8 @@ export default Vue.extend({
   },
   methods: {
     _updateRefinements(base64refinements: string): void {
-      let newRefinements = {}
+      let newRefinements = {};
+
       if (base64refinements) {
         newRefinements = JSON.parse(atob(base64refinements));
       }
@@ -45,6 +46,7 @@ export default Vue.extend({
   },
   beforeRouteUpdate(to, from, next): void {
     this._updateRefinements(to.params.base64refinements);
+
     next();
   },
 });
