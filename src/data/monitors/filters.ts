@@ -2,12 +2,6 @@
 
 import { TYPES, IdentifierFilter } from '@/types';
 
-const title = 'Desktop Monitors';
-
-const templates = {
-    list: '{{ item.manufacturer }} {{ item.model }} {{ item.size }}" {{ item.technology }} Monitor',
-  };
-
 const filters: IdentifierFilter[] = [
     {
       name: 'manufacturer',
@@ -37,4 +31,3 @@ const filters: IdentifierFilter[] = [
   ];
 
 export default filters;
-export { title, templates };

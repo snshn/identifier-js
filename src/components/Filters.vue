@@ -49,7 +49,7 @@ export default Vue.extend({
       return filters.filter((f) => f.type === TYPES.BOOL);
     },
     nonBooleanFilters(): IdentifierFilter[] {
-      return filters.filter((f) => f.type !== TYPES.BOOL);
+      return filters.filter((f) => f.type !== TYPES.BOOL && [TYPES.ENUM].includes(f.type));
     },
   },
 });

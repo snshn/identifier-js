@@ -2,12 +2,6 @@
 
 import { TYPES, IdentifierFilter } from '@/types';
 
-const title = 'Desktop, Server, and Workstation CPUs';
-
-const templates = {
-  list: '{{ item.manufacturer }} {{ item.name }}',
-};
-
 const filters: IdentifierFilter[] = [
 
   // Enum
@@ -49,4 +43,3 @@ const filters: IdentifierFilter[] = [
 ];
 
 export default filters;
-export { title, templates };

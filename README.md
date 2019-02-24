@@ -7,7 +7,7 @@ Schema-based dataset filtering engine in a form of a reactive web UI
 
 ### Fire up local development server
 ```
-make start
+make
 ```
 
 ### Compile and minify for production
