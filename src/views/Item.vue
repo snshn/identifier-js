@@ -1,5 +1,5 @@
 <template>
-  <div class="container item view"><v-runtime-template :template="template" /></div>
+  <v-runtime-template :template="template" />
 </template>
 
 
@@ -20,7 +20,7 @@ export default Vue.extend({
   data() {
     return {
       item: JSON.parse(atob(this.base64data)),
-      template: templates.item,
+      template: '<div class="container item view">' + templates.item + '</div>',
     };
   },
 });
