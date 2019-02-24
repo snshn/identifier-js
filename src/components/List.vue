@@ -20,7 +20,7 @@
 
 import Vue from 'vue';
 import store from '@/store';
-import { Item } from '../data/_symlink/items';
+import { Item } from '../data/_current/items';
 
 export default Vue.extend({
   name: 'List',
