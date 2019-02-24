@@ -5,7 +5,7 @@ import { IdentifierEnum } from '@/types';
 const TECHNOLOGIES: IdentifierEnum = {
   THERMAL_GREASE: 'Thermal Grease',
   LIQUID_METAL: 'Liquid Metal',
-  GRAPHITE: 'Graphite',
+  THERMAL_PAD: 'Thermal Pad',
 };
 
 export default TECHNOLOGIES;

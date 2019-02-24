@@ -3,10 +3,14 @@
 import { IdentifierEnum } from '@/types';
 
 const MANUFACTURERS: IdentifierEnum = {
-  THERMAL_GRIZZLY: 'Thermal Grizzly',
-  EK_TIM: 'EK-TIM',
   ARCTIC: 'Arctic',
-  IC: 'Innovation Cooling',
+  COOLLABORATORY: 'Coollaboratory',
+  COOLER_MASTER: 'Cooler Master',
+  EK_TIM: 'EK-TIM',
+  GELID: 'Gelid',
+  INNOVATION_COOLING: 'Innovation Cooling',
+  NOCTUA: 'Noctua',
+  THERMAL_GRIZZLY: 'Thermal Grizzly',
 };
 
 export default MANUFACTURERS;
