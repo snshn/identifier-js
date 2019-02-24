@@ -31,21 +31,24 @@ export default Vue.extend({
     ListComponent,
   },
   methods: {
-    _updateRefinements(base64refinements: string): void {
+    _updateState(base64state: string): void {
       let newRefinements = {};
 
-      if (base64refinements) {
-        newRefinements = JSON.parse(atob(base64refinements));
+      if (base64state) {
+        const parsedState = JSON.parse(atob(base64state));
+        if ('refinements' in parsedState) {
+          newRefinements = parsedState.refinements;
+        }
       }
 
       this.$store.commit('setAllRefinements', newRefinements);
     },
   },
   created(): void {
-    this._updateRefinements(this.$route.params.base64refinements);
+    this._updateState(this.$route.params.base64state);
   },
   beforeRouteUpdate(to, from, next): void {
-    this._updateRefinements(to.params.base64refinements);
+    this._updateState(to.params.base64state);
 
     next();
   },
