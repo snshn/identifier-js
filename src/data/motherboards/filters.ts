@@ -2,39 +2,44 @@
 
 import { TYPES, IdentifierFilter } from '@/types';
 
-const title = 'Desktop/Server/Workstation Motherboards';
-
-const templates = {
-  list: '{{ item.manufacturer }} {{ item.name }}',
-};
-
 const filters: IdentifierFilter[] = [
+
+  // Enum
   {
     name: 'manufacturer',
     title: 'Manufacturer',
     type: TYPES.ENUM,
   },
   {
-    name: 'technology',
-    title: 'Technology',
+    name: 'socket',
+    title: 'Socket',
     type: TYPES.ENUM,
   },
+
+  // Int
   {
-    name: 'curved',
-    title: 'Curved',
-    type: TYPES.BOOL,
+    name: 'sataII',
+    title: 'No. of SATA II ports',
+    type: TYPES.INT,
   },
   {
-    name: 'camera',
-    title: 'Built-in camera',
-    type: TYPES.BOOL,
+    name: 'sataIII',
+    title: 'No. of SATA III ports',
+    type: TYPES.INT,
   },
   {
-    name: 'speakers',
-    title: 'Built-in speakers',
+    name: 'm2',
+    title: 'No. of M.2 ports',
+    type: TYPES.INT,
+  },
+
+
+  // Bool
+  {
+    name: 'ecc',
+    title: 'ECC memory support',
     type: TYPES.BOOL,
   },
 ];
 
 export default filters;
-export { title, templates };

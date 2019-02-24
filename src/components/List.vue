@@ -1,7 +1,7 @@
 <template>
   <div class="component-list">
     <div v-if="items.length === 0">
-      <p>No items match current filter settings.</p>
+      <p>No items matched current filter settings</p>
     </div>
     <template v-else>
       <ul v-if="mode === 'List'" class="mode-list">

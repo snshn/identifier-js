@@ -2,12 +2,6 @@
 
 import { TYPES, IdentifierFilter } from '@/types';
 
-const title = 'Thermal Compoounds';
-
-const templates = {
-  list: '{{ item.manufacturer }} {{ item.name }}',
-};
-
 const filters: IdentifierFilter[] = [
   {
     name: 'manufacturer',
@@ -32,4 +26,3 @@ const filters: IdentifierFilter[] = [
 ];
 
 export default filters;
-export { title, templates };

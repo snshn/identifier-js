@@ -28,7 +28,7 @@ const items: Item[] = [
   {
     manufacturer: MANUFACTURERS.DELL,
     model: 'UP3017Q',
-    name: 'Dell 30 UltraSharp OLED Monitor',
+    name: '30" UltraSharp OLED Monitor',
     technology: TECHNOLOGIES.OLED,
     size: 30,
     hz: 60,
@@ -50,7 +50,7 @@ const items: Item[] = [
   {
     manufacturer: MANUFACTURERS.SAMSUNG,
     model: 'CHG90',
-    name: 'Samsung CHG90 49" 32:9 Curved 144 Hz FreeSync HDR LCD Monitor',
+    name: '49" 32:9 Curved 144 Hz FreeSync HDR LCD Monitor',
     technology: TECHNOLOGIES.LCD,
     size: 49,
     hz: 144,
@@ -76,7 +76,7 @@ const items: Item[] = [
   {
     manufacturer: MANUFACTURERS.BENQ,
     model: 'SW271',
-    name: 'BenQ SW271 27" 16:9 4K IPS Monitor',
+    name: '27" 16:9 4K IPS Monitor',
     technology: TECHNOLOGIES.LCD,
     size: 27,
     hz: 60,
