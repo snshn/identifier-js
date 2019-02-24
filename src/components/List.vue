@@ -6,7 +6,9 @@
     <template v-else>
       <ul v-if="mode === 'List'" class="mode-list">
         <li v-for="(item, index) in items" :key="index">
-          {{ item.manufacturer }} {{ item.name }} <!-- TODO -->
+          <router-link :to="getItemDataLink(item)">
+            {{ item.manufacturer }} {{ item.name }} <!-- TODO -->
+          </router-link>
         </li>
       </ul>
     </template>
@@ -18,9 +20,15 @@
 
 import Vue from 'vue';
 import store from '@/store';
+import { Item } from '../data/_symlink/items';
 
 export default Vue.extend({
   name: 'List',
+  methods: {
+    getItemDataLink(item: Item) {
+      return '/item/' + btoa(JSON.stringify(item));
+    },
+  },
   computed: {
     items() {
       return store.getters.items;

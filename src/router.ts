@@ -19,7 +19,8 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
     },
     {
-      path: '/item/:id',
+      path: '/item/:base64data',
+      props: true,
       name: 'item',
       component: () => import(/* webpackChunkName: "item" */ './views/Item.vue'),
     },
