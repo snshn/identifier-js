@@ -7,7 +7,7 @@
       <ul v-if="mode === 'List'" class="mode-list">
         <li v-for="(item, index) in items" :key="index">
           <router-link :to="getItemDataLink(item)">
-            {{ item.manufacturer }} {{ item.name }} <!-- TODO -->
+            <list-item :item="item" />
           </router-link>
         </li>
       </ul>
@@ -20,10 +20,14 @@
 
 import Vue from 'vue';
 import store from '@/store';
-import { Item } from '../data/_current/items';
+import { Item } from '../data';
+import ListItem from './ListItem.vue';
 
 export default Vue.extend({
   name: 'List',
+  components: {
+    ListItem,
+  },
   methods: {
     getItemDataLink(item: Item) {
       return '/item/' + btoa(JSON.stringify(item));

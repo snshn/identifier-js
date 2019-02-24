@@ -24,7 +24,7 @@
           <div class="columns">
             <div class="column">
               <p>
-                Contains a sample set of data which may be not absolutely accurate.
+                Contains a sample set of data which may be inaccurate.
               </p>
               <p>
                 <small>
@@ -66,7 +66,7 @@ export default Vue.extend({
   },
   methods: {
     getMainLink() {
-      return btoa(JSON.stringify(this.refinements));
+      return '/' + btoa(JSON.stringify(this.refinements));
     },
   },
   computed: mapState(['refinements']),

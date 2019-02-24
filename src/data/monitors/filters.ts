@@ -5,12 +5,12 @@ import { TYPES, IdentifierFilter } from '@/types';
 const filters: IdentifierFilter[] = [
     {
       name: 'manufacturer',
-      title: 'Manufacturer',
+      title: 'Manufacturers',
       type: TYPES.ENUM,
     },
     {
       name: 'technology',
-      title: 'Technology',
+      title: 'Technologies',
       type: TYPES.ENUM,
     },
     {
