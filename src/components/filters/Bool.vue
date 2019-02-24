@@ -38,7 +38,7 @@ export default Vue.extend({
           this.prevVal = true;
       }
 
-      this.$store.commit('setBoolFilterVal', {
+      this.$store.commit('setRefinementBool', {
         name: this.filterName,
         value: this.prevVal,
       });
@@ -46,7 +46,7 @@ export default Vue.extend({
   },
   mounted() {
     const checkboxEl = this.$el.getElementsByTagName('input')[0];
-    const currentVal = this.$store.state.filters[this.filterName];
+    const currentVal = this.$store.state.refinements[this.filterName];
 
     if (currentVal === undefined) {
       checkboxEl.indeterminate = true;
