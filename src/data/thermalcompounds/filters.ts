@@ -14,8 +14,8 @@ const filters: IdentifierFilter[] = [
     type: TYPES.ENUM,
   },
   {
-    name: 'thermalConductivity (W/mk)',
-    title: 'Thermal Conductivity',
+    name: 'thermalConductivity',
+    title: 'Thermal Conductivity (W/mk)',
     type: TYPES.INT,
   },
   {

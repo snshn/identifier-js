@@ -66,7 +66,7 @@ export default Vue.extend({
   },
   methods: {
     getMainLink() {
-      return '/' + btoa(JSON.stringify(this.refinements));
+      return '/' + btoa(JSON.stringify({ refinements: this.refinements }));
     },
   },
   computed: mapState(['refinements']),
@@ -74,13 +74,13 @@ export default Vue.extend({
     // Watch the 'refinements' state parameter
     refinements: {
       handler(newValue): void {
-        const newValueEncoded = btoa(JSON.stringify(newValue));
+        const newValueEncoded = btoa(JSON.stringify({ refinements: newValue }));
 
         // Programmatically navigate to /{newValueEncoded}
         this.$router.push({
           name: 'main',
           params: {
-            base64refinements: newValueEncoded,
+            base64state: newValueEncoded,
           },
         });
       },

@@ -25,7 +25,7 @@ export default new Router({
       props: true,
     },
     {
-      path: '/:base64refinements?',
+      path: '/:base64state?',
       name: 'main',
       component: Main,
     },

@@ -1,20 +1,26 @@
 <template>
-  <div class="container item view">{{item}}</div>
+  <div class="container item view"><v-runtime-template :template="template" /></div>
 </template>
 
 
 <script lang="ts">
 
 import Vue from 'vue';
+import VRuntimeTemplate from 'v-runtime-template';
+import { templates, Item } from '../data';
 
 export default Vue.extend({
   name: 'Item',
   props: [
     'base64data',
   ],
+  components: {
+    VRuntimeTemplate,
+  },
   data() {
     return {
       item: JSON.parse(atob(this.base64data)),
+      template: templates.item,
     };
   },
 });
