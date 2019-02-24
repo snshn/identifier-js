@@ -3,10 +3,11 @@
 import { IdentifierEnum } from '@/types';
 
 const MANUFACTURERS: IdentifierEnum = {
+  ACER: 'Acer',
+  ASUS: 'Asus',
+  BENQ: 'BenQ',
   DELL: 'Dell',
   SAMSUNG: 'Samsung',
-  ACER: 'Acer',
-  BENQ: 'BenQ',
 };
 
 export default MANUFACTURERS;

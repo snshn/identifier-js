@@ -98,6 +98,27 @@ const items: Item[] = [
     camera: false,
     speakers: false,
   },
+  {
+    manufacturer: MANUFACTURERS.ASUS,
+    model: 'PQ22UC',
+    name: '21.6" Professional OLED Monitor',
+    technology: TECHNOLOGIES.OLED,
+    size: 21.6,
+    hz: 60,
+    width: 3840,
+    height: 2160,
+    response: 0.1,
+    colors: 1070000000,
+    staticContrast: 0, // TODO
+    dynamicContrast: 1000000,
+    curved: false,
+    ports: {
+      [PORTS.USBC]: 2,
+      [PORTS.MICROHDMI]: 1,
+    },
+    camera: false,
+    speakers: false,
+  },
 ];
 
 export default items;
