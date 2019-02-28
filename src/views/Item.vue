@@ -19,7 +19,7 @@ export default Vue.extend({
   },
   data() {
     return {
-      item: JSON.parse(atob(this.base64data)),
+      item: JSON.parse(atob(this.base64data)).item,
       template: '<div class="container item view">' + templates.item + '</div>',
     };
   },

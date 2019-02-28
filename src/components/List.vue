@@ -30,7 +30,7 @@ export default Vue.extend({
   },
   methods: {
     getItemDataLink(item: Item) {
-      return '/item/' + btoa(JSON.stringify(item));
+      return '/item/' + btoa(JSON.stringify({ item }));
     },
   },
   computed: {
