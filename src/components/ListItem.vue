@@ -1,5 +1,6 @@
 <template><v-runtime-template :template="template" /></template>
 
+
 <script lang="ts">
 
 import Vue from 'vue';
@@ -13,8 +14,17 @@ export default Vue.extend({
     VRuntimeTemplate,
   },
   data: () => ({
-    template: '<div class="list-item">' + templates.list + '</div>',
+    template: '<span class="list-item">' + templates.list + '</span>',
   }),
 });
 
 </script>
+
+
+<style lang="scss">
+
+.list-item {
+  display: inline-block;
+}
+
+</style>
