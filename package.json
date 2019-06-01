@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "postbuild": "echo `git rev-parse --abbrev-ref HEAD`':'`git rev-parse HEAD | cut -c1-8` > dist/revision.txt",
+    "postbuild": "echo `git rev-parse --abbrev-ref HEAD`':'`git rev-parse HEAD | cut -c1-7` > dist/revision.txt",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "vue-cli-service test:unit"
